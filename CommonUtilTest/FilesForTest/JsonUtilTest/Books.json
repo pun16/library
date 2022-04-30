@@ -1,0 +1,14 @@
+[
+    {
+        "name": "book_test",
+        "isInLibrary": true,
+        "dateBorrowed": "unknown",
+        "user": "unknown"
+    },
+    {
+        "name": "book_test2",
+        "isInLibrary": true,
+        "dateBorrowed": "unknown",
+        "user": "unknown"
+    }
+]
