@@ -1,0 +1,22 @@
+[
+    {
+        "name": "User_test",
+        "limit": 1,
+        "booksBorrowed": [
+            "book"
+        ]
+    },
+    {
+        "name": "User_test2",
+        "limit": 2,
+        "booksBorrowed": []
+    },
+    {
+        "name": "User_test3",
+        "limit": 0,
+        "booksBorrowed": [
+            "book",
+            "banana"
+        ]
+    }
+]
