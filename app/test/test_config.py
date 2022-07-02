@@ -7,13 +7,14 @@ from flask_testing import TestCase
 from manage import app
 from app.main.config import basedir
 
+from flask import Flask
 
 class TestDevelopmentConfig(TestCase):
-    def create_app(self):
+    def create_app(self) -> Flask:
         app.config.from_object('app.main.config.DevelopmentConfig')
         return app
 
-    def test_app_is_development(self):
+    def test_app_is_development(self) -> None:
         self.assertFalse(app.config['SECRET_KEY'] is 'my_precious')
         self.assertTrue(app.config['DEBUG'] is True)
         self.assertFalse(current_app is None)
@@ -23,11 +24,11 @@ class TestDevelopmentConfig(TestCase):
 
 
 class TestTestingConfig(TestCase):
-    def create_app(self):
+    def create_app(self) -> Flask:
         app.config.from_object('app.main.config.TestingConfig')
         return app
 
-    def test_app_is_testing(self):
+    def test_app_is_testing(self) -> None:
         self.assertFalse(app.config['SECRET_KEY'] is 'my_precious')
         self.assertTrue(app.config['DEBUG'])
         self.assertTrue(
@@ -36,11 +37,11 @@ class TestTestingConfig(TestCase):
 
 
 class TestProductionConfig(TestCase):
-    def create_app(self):
+    def create_app(self) -> Flask:
         app.config.from_object('app.main.config.ProductionConfig')
         return app
 
-    def test_app_is_production(self):
+    def test_app_is_production(self) -> None:
         self.assertTrue(app.config['DEBUG'] is False)
 
 
