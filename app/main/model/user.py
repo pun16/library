@@ -6,7 +6,6 @@ from ..config import key
 import jwt
 from typing import Union
 
-
 class User(db.Model):
     """ User Model for storing user related details """
     __tablename__ = "user"
@@ -17,6 +16,7 @@ class User(db.Model):
     is_admin = db.Column(db.Boolean, nullable=False, default=False)
     username = db.Column(db.String(50), unique=True)
     password_hash = db.Column(db.String(100))
+    books = db.relationship("Book", backref='user')
     
 
 
