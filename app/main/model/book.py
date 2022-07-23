@@ -13,7 +13,7 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     is_in_lib = db.Column(db.Boolean, nullable=False)
     registered_on = db.Column(db.DateTime, nullable=False)
-    date_borrow = db.Column(db.DateTime, nullable=True)
+    date_borrowed = db.Column(db.DateTime, nullable=True)
     bookname = db.Column(db.String(50), unique=True, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 

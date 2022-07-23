@@ -5,7 +5,6 @@ import datetime
 from ..config import key
 import jwt
 from typing import Union
-from .book import Book
 
 class User(db.Model):
     """ User Model for storing user related details """
