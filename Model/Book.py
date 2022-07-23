@@ -1,4 +1,4 @@
-class Book():
+class Book(): 
     def __init__(self, name:str, isInLibrary:str = True, dateBorrowed:str = "unknown", user:str = "unknown"):
         self.name = name
         self.isInLibrary = isInLibrary
