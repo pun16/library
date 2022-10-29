@@ -16,6 +16,7 @@ class User(db.Model):
     is_admin = db.Column(db.Boolean, nullable=False, default=False)
     username = db.Column(db.String(50), unique=True)
     password_hash = db.Column(db.String(100))
+    limits = db.Column(db.Integer, nullable=False)
     books = db.relationship("Book", backref='user')
     
 

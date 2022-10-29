@@ -13,6 +13,7 @@ class TestUserModel(BaseTestCase):
         user = User(
             email='test@test.com',
             password='test',
+            limits=2,
             registered_on=datetime.datetime.utcnow()
         )
         db.session.add(user)
@@ -24,6 +25,7 @@ class TestUserModel(BaseTestCase):
         user = User(
             email='test@test.com',
             password='test',
+            limits=2,
             registered_on=datetime.datetime.utcnow()
         )
         self.assertTrue(user.check_password("test"))
@@ -32,6 +34,7 @@ class TestUserModel(BaseTestCase):
         user = User(
             email='test@test.com',
             password='test',
+            limits=2,
             registered_on=datetime.datetime.utcnow()
         )
         self.assertFalse(user.check_password("thiswillfail"))
@@ -40,6 +43,7 @@ class TestUserModel(BaseTestCase):
         user = User(
             email='test@test.com',
             password='test',
+            limits=2,
             registered_on=datetime.datetime.utcnow()
         )
         db.session.add(user)
