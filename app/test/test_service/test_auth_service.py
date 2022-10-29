@@ -15,6 +15,7 @@ class TestAuthService(BaseTestCase):
             email="email.test",
             username="usertest",
             password="password",
+            limits=2,
             registered_on=datetime.datetime.utcnow()
         )
         dataD = {
@@ -43,6 +44,7 @@ class TestAuthService(BaseTestCase):
             email="email.test",
             username="usertest",
             password="password",
+            limits=2,
             registered_on=datetime.datetime.utcnow()
         )
         db.session.add(dataU)

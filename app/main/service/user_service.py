@@ -13,6 +13,7 @@ def save_new_user(data: Dict[str, str]) -> Tuple[Dict[str, str], int]:
             email=data['email'],
             username=data['username'],
             password=data['password'],
+            limits=2,
             registered_on=datetime.datetime.utcnow()
         )
         save_changes(new_user)
