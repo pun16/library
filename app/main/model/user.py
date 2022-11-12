@@ -1,4 +1,4 @@
-
+from .book import Book
 from .. import db, flask_bcrypt
 import datetime
 # from app.main.model.blacklist import BlacklistToken
